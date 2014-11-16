@@ -1,0 +1,107 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>guessing game</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- <link rel="stylesheet" href="//code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css"> -->
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+        
+        <link rel="stylesheet" href="styles/vendor.css">
+
+        <link rel="stylesheet" href="styles/main.css">
+
+        <script src="scripts/vendor/modernizr.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="container">
+            <!-- <div class="header">
+                <h3 class="white">Fullstack Academy</h3>
+            </div> -->
+
+            <div class="game-panel">
+              <h1 class="game-title text-center">GUESSING GAME</h1>
+              <div class="game-info text-center">
+                <p><strong>Welcome to the Guessing Game</strong></p>
+
+                I&rsquo;ll pick a number between 1 and 100 and you try to guess what it is. Go ahead a guess a number below.
+              </div>
+              <div class="">
+                <!-- <div class="col-xs-9 text-center">
+                  Number of guesses left: 
+                </div>
+                <div class="col-xs-3 text-left">
+                  <span class="label label-default" id="guesses-left"></span> 
+                </div> -->
+
+                <table class="table" >
+                  <tbody>
+                      <tr class="bg-secondary white">
+                        <th class="text-center" scope="row">Number of guesses left</th>
+                        <td class="text-center" id="guesses-left"></td>
+                      </tr>
+                  </tbody>
+                </table>
+                
+                
+              </div>
+
+              <div class="game-form form-group">
+                <input class="form-control form-control-lg" id="guess" type="text" placeholder="Enter it here..." >
+              </div>
+              
+              <div class="col-xs-4 padding-reset">
+                <button class="btn btn-success" id="submit-guess" type="button">SUBMIT</button>
+              </div>
+              <div class="col-xs-4 padding-reset">
+                <button class="btn btn-primary" id="play-again" type="button" disabled><span class="hidden-xs">PLAY</span> AGAIN?</button>
+              </div>
+              <div class="col-xs-4 padding-reset">
+                <button type="button" tabindex="0" class="btn btn-danger" id="hint" data-placement="top" data-toggle="popover" data-trigger="focus"> HINT</button>
+              </div>
+                     
+
+              <table class="table" id="guess-chart">
+                <tbody>
+                  <tr id="number">
+                    <th scope="row">Guess</th>
+                    <td class="filler-text">Your guess will go here</td>
+                  </tr>
+                  <tr id="level">
+                    <th scope="row">Level</th>
+                    <td class="filler-text">How hot/cold you are goes here</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+
+            <div class="footer text-center">
+                <p>Made with <span class="red ion-heart"></span> by <a href="//github.com/vincenzomerolla"><span class="ion-social-github"></span> vincenzomerolla</a></p>
+            </div>
+        </div>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <script src="scripts/vendor.js"></script>
+
+        <script src="scripts/plugins.js"></script>
+
+        <script src="scripts/main.js"></script>
+</body>
+</html>
