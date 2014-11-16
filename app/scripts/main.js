@@ -4,7 +4,6 @@ $(function () {
   var randNumber;
   var numGuesses = 5;
   var submit = $('#submit-guess');
-  var alert = $('.alert');
   var hint = $('#hint');
   var guess = $('#guess');
   var playAgain = $('#play-again');
@@ -47,7 +46,6 @@ $(function () {
   }
 
   // Initialization for Bootstrap javascript elements
-  alert.alert();
   genRandNumber();
   hint.popover({ content: randNumber});
   guessesLeft.text(numGuesses);
