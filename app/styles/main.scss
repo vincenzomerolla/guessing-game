@@ -1,99 +1,126 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 
 //Bootstrap Resets
-$font-family-sans-serif:  "Lato","Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif:       "Lustria", Georgia, "Times New Roman", Times, serif !default;
+$font-family-sans-serif:  "Source Sans Pro","Helvetica Neue", Helvetica, Arial, sans-serif !default;
+//$font-family-serif:       "Lustria", Georgia, "Times New Roman", Times, serif !default;
 $headings-font-family:    $font-family-sans-serif !default;
+// $border-radius-base:      0px !default;
+// $border-radius-large:     0px !default;
+// $border-radius-small:     0px !default;
+
+$text-color:            #6D6461 !default;
+$btn-font-weight: 300 !default;
+$headings-font-weight:    700 !default;
+
+$brand-success: #34A56A !default;
+$brand-primary: #6A95B0 !default;
+$brand-danger: #E35F48 !default;
+$brand-secondary:  #444859;
+
+$headings-color:   white !default;
+$headings-font-family:    $font-family-serif !default;
+$popover-bg: $brand-secondary !default;
+$popover-arrow-color: $brand-secondary !default;
+
+// $state-success-text:             $brand-success !default;
+// $state-success-bg:               white !default;
+// $state-success-border:           darken(adjust-hue($state-success-text, -10), 5%) !default;
+
+//$state-danger-text:              $brand-danger !default;
+// $state-danger-bg:                $brand-danger !default;
+// $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
 // bower:scss
-@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "../bower_components/colors/sass/colors";
+@import "../bower_components/ionicons/scss/ionicons";
 // endbower
 
 
 
 .browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
 }
 
-/* Space out content a bit */
 body {
-    padding-top: 20px;
-    padding-bottom: 20px;
+  font-weight: 300;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
 .footer {
-    padding-left: 15px;
-    padding-right: 15px;
+  padding-top: 20px;
 }
 
-/* Custom page header */
-.header {
-    border-bottom: 1px solid #e5e5e5;
-
-    /* Make the masthead heading the same height as the navigation */
-    h3 {
-        margin-top: 0;
-        margin-bottom: 0;
-        line-height: 40px;
-        padding-bottom: 19px;
-    }
+.game-panel {
+  max-width: 400px;
+  background-color: #EEEDED;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Custom page footer */
-.footer {
-    padding-top: 19px;
-    color: #777;
-    border-top: 1px solid #e5e5e5;
+.game-title {
+  background-color: $brand-secondary;
+  margin: 0;
+  padding: 20px;
 }
 
-.container-narrow > hr {
-    margin: 30px 0;
+.game-info {
+  padding: 20px;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
+.game-form {
+  margin-top: 15px;
+}
+
+#guess {
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.btn {
+  width:100%;
+  border-radius: 0px;
+  padding: 20px 10px;
+}
+
+.padding-reset {
+  padding: 0;
+}
+
+.popover {
+  color: $white;
+}
+
+a {
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  } 
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.bg-secondary {
+  background-color: $brand-secondary;
+}
+
+#guess-chart {
+  td {
     text-align: center;
-    border-bottom: 1px solid #e5e5e5;
-    .btn {
-        font-size: 21px;
-        padding: 14px 24px;
-    }
-}
-
-/* Supporting marketing content */
-.marketing {
-    margin: 40px 0;
-    p + h4 {
-        margin-top: 28px;
-    }
+  }
 }
 
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 730px;
-    }
-
-    /* Remove the padding we set earlier */
-    .header,
-    .marketing,
-    .footer {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    /* Space out the masthead */
-    .header {
-        margin-bottom: 30px;
-    }
-
-    /* Remove the bottom border on the jumbotron for visual effect */
-    .jumbotron {
-        border-bottom: 0;
-    }
+@media screen and (min-width: $screen-sm-min) {
+  .container {
+      max-width: 730px;
+  }
 }
