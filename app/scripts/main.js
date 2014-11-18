@@ -3,6 +3,8 @@
 $(function () {
   var randNumber = null;
   var numGuesses = 0;
+  var guesses = [];
+  var isGameOver = false;
   var submit = $('#submit-guess');
   var hint = $('#hint');
   var guess = $('#guess');
@@ -10,7 +12,6 @@ $(function () {
   var fillerText = $('.filler-text');
   var gameForm = $('.game-form');
   var guessesLeft = $('#guesses-left');
-  var guesses = [];
   var numberRow = $('#guess-chart #number');
   var levelRow = $('#guess-chart #level');
        
@@ -28,6 +29,7 @@ $(function () {
   }
 
   function restartGame() {
+    isGameOver = false;
     numberRow.find('td:gt(0)').remove();
     levelRow.find('td:gt(0)').remove();
     if (fillerText.hasClass('hide')) {
@@ -44,6 +46,7 @@ $(function () {
   }
 
   function endGame() {
+    isGameOver = true;
     submit.prop({ disabled: true });
   }
 
@@ -130,7 +133,7 @@ $(function () {
 
   // Input enter keypress --- triggers submit button click event
   guess.keypress(function(e) {
-    if(e.which === 13 && numGuesses !== 5) {
+    if(e.which === 13 && !isGameOver) {
       submit.trigger('click');
     }
   });
